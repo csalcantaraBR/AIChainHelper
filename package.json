@@ -1,0 +1,22 @@
+{
+  "name": "aichainhelper",
+  "private": true,
+  "workspaces": [
+    "apps/gui",
+    "packages/agent"
+  ],
+  "scripts": {
+    "dev": "concurrently \"pnpm --filter apps/gui dev\" \"pnpm --filter packages/agent start:dev\"",
+    "typecheck": "tsc -p tsconfig.base.json --noEmit",
+    "build": "pnpm run typecheck && pnpm --filter apps/gui run build",
+    "build:cli": "pnpm --filter packages/agent run build:cli"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1",
+    "typescript": "^5.0.0",
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0"
+  }
+}
