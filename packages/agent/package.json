@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "axios": "^1.6.0",
-    "toml": "^3.0.0",
+    "toml": "npm:@iarna/toml@^2.2.5",
     "winston": "^3.9.0",
     "systeminformation": "^5.20.0",
     "dockerode": "^3.3.0",
