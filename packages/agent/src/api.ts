@@ -46,7 +46,7 @@ export class AiChainAPI {
     return this.requestWithBackoff(() => this.client.post('/api/v1/nodes', hw));
   }
 
-  heartbeat(nodeId: string, status: 'idle' | 'busy') {
+  heartbeat(nodeId: string, status: 'idle' | 'busy' | 'offline') {
     return this.requestWithBackoff(() =>
       this.client.post(`/api/v1/nodes/${encodeURIComponent(nodeId)}/heartbeat`, { status })
     );

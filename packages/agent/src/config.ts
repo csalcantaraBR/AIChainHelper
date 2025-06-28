@@ -65,6 +65,15 @@ function ensureAppDir(): string {
 }
 
 /**
+ * Retrieve the path to the application configuration directory.
+ *
+ * The directory is created if it does not yet exist.
+ */
+export function getConfigDir(): string {
+  return ensureAppDir();
+}
+
+/**
  * Load the application configuration from `config.toml`.
  *
  * @returns The parsed configuration object.
