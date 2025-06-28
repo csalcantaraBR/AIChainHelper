@@ -1,1 +1,1 @@
-console.log('agent');
+export { detectHardware, type HardwareInfo } from './hardware';
