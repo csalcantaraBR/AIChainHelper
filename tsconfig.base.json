@@ -8,8 +8,17 @@
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
-      "@agent/*": ["packages/agent/src/*"]
+      "@agent/*": [
+        "packages/agent/src/*"
+      ]
     },
-    "types": ["node"]
+    "types": [
+      "node"
+    ],
+    "jsx": "react-jsx",
+    "lib": [
+      "ES2020",
+      "DOM"
+    ]
   }
 }
